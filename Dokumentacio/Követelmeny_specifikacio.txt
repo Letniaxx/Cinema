@@ -1,0 +1,48 @@
+Szabad riport a megrendelõvel személyesen
+-----------------------------------------
+
+ [Résztvevõk]
+-Megrendelõ: Karácsond Szilveszter István vezérigazgató.
+-Angyal Dominik fejlesztõ.
+-Jónás Réka fejlesztõ
+
+3300-Eger, 2018.10.31.
+-----------------------------------------
+
+[Angyal Dominik]
+  Milyen rendszert képzelnek el? Mit szeretnének megvalósítani?
+
+  [Megrendelõ]
+Az új rendszer (Cinema Booking System) nevet kapja meg. Ami tualjdonképpen egy mozi ülésfoglaló rendszert jelent. A vállalatnál az eddigiektõl eltérõ módon, teljesen önálló asztali alkamazásról beszélhetünk, a szónak abban az aspektusában, hogy egyik meglévõ alkalmazásunk/szoftverünk sem fog hozzá kapcsolódni, hanem egy teljesen önálló alkalmazásként fog mûködni, ami a késõbbiekben még igényszerint kibõvülhet majd. Egyenlõre még az alap verzió beszerzése a vállalat legfõbb célja.
+
+  [Angyal Dominik]
+Hogyan mûködjön az új rendszer?
+
+  [Megrendelõ]
+A szoftver minden külsõ felhasználó számára engedélyezze, hogy mozi üléseket foglaljon a mozi adott termében, regisztrációval és regisztráció nélkül is. A foglalás külön felületen történjen. A foglalt és még szabad székek legyenek megkülönböztetve egymástól. A felületen a foglaláshoz legyen szükség az illetõ teljes nevére, email címére és telefonszámára is.  A sikeres foglalásról e-mailban küldjön értesítést. A foglalás mellett legyen olyan opció is, hogy a jegyeket rögtön meg lehessen venni! Legyen kártyás és kézpénzes fizetés is. A regisztráláskor lehessen körlevélre feliratkozni, ami hetente küld friss információt a regisztrál emailek-re, a heti vetítésrõl.
+
+Legyen egy elõre elkészített root jogosultságokkal rendelkezõ felhasználó is, aminek a jelszavát a szoftver átadása után meg lehet változtatni és elmenti magát az adatbázisba. A root jogosultságú felhasználó a szoftver minden funkcióját érje el, ilyenek például:
+- Filmeket tud letörölni, és kihelyezni az oldalra.
+- Idõpontokat tud változtatni, foglalásokat tud törölni.
+- Termeket tud elérhetõvé/nem elérhetõvé tenni!
+- Az üdvözlõ oldalra tudjon figyelemfelkeltõ üzenetet írni (például nyitvatartás)
+- Az árakat tudja változtatni
+- A vetízés típusát tudja változtatni.
+
+Adatbázis tekintetében egy egyszerû 3 táblás adatbázisról beszélünk. A regisztrált felhasználóknak az adatai külön legyenek a foglalásoktól. A regisztrált felhasználókról tároljuk el a teljes nevét, email címét, telefonszámát, regisztráció pontos dátumát UTC+1 szerint, és legyen egyedi azonosítója. A másik táblába a foglalások fognak kerülni, abban is legyen eltárolva a foglaló teljes neve, telefonszáma, email címe, foglalásának dátuma, melyik filmre foglalt, hányas vetítésre, melyik teremben, hanyas széket/székeket. A harmadik táblában legyenek a filmek, legyen eltárolva a film angol címe, magyar címe, magyar elõzetes linkje, hány perces, és típusa.
+
+
+Legyen egy egyszerû logolást végzõ funkció is, ami egy txt-be kimenti az oldalon végzett teékenységeket/módosításokat.
+
+
+  [Jónás Réka]
+Hogyan mûködjön együtt a meglévõ rendszerekkel?
+
+  [Megrendelõ]
+Ami biztos, hogy az új alkalmazásnak kapcsolódnia kell majd több felületen keresztül is egy adatbázishoz, amibõl különbözõ információkat ér el, vagy tesz bele.
+
+ [Jónás Réka]
+A "több felületen keresztül" való kapcsolódás alatt mit ért ön? 
+
+ [Megrendelõ]
+Azt, hogy a szoftver tartalmazzon olyan funkciókat amivel fel lehet tölteni bizonyos adatokat, vagy ki lehet szedni belõle bizonyos adatokat.
