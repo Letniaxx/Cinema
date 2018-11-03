@@ -1,0 +1,49 @@
+Cinema - Helyfoglaló projekt
+
+A riport alapján a megrendelõ egy olyan programot szeretne,
+amely segítségével a mozilátogatók interneten keresztül le tudják
+foglalni a kínálatban szereplõ vetítésekre a nekik szimpatikus helyet.
+Ezzel megkönnyítve a foglalási folyamatot.
+
+- Fontos, hogy a kínálatban szereplõ filmek minél teljesebb körû információt szolgáltassanak a mozilátogatóknak.
+
+-Jó lenne, ha a foglalásokat regisztráció után biztosítaná, megkönnyítve a késõbbi foglalások menetét a felhasználónak, valamint a mozi számára ezzel 
+lehetõvé téve a foglaló személyének beazonosítását.
+
+- Grafikus felületen tegye lehetõvé a szabad helyek áttekintését, eltérõ színnel jelezve a már foglalt
+és a még szabad helyeket.
+
+- E-mail útján értesítse a vendégeket a foglalás megerõsítésérõl.
+
+- Jó lenne, ha minél letisztultabb lenne, úgy, hogy egy hozzá nem értõ
+ember is könnyen használni tudja (Idõsebb felhasználokat is figyelembe véve).
+
+- Fontos, hogy a program a kivételes helyzeteket is kezelni tudja (teltház, foglalás lemondása, nyitva-zárvatartás)
+
+Követelménylista:
+
+ID			NÉV				Kifejtés
+
+CIN-P-REQ1		Filmek megjelenítése		A kínálatban lévõ filmek megjelenítése a hozzájuk tartozó kiegészítõ információkkal (vetítési idõpont, korhatár, vetítés hossza)
+
+CIN-P-REQ2		Regisztráció biztosítása	Regisztráció után biztosítsa a foglalás lebonyolítását, a foglalást végzõ személy beazonosíthatósága miatt.
+
+CIN-P-REQ3		Helyek áttekinthetõsége		Grafikus felületen jelenítse meg a lefoglalható helyeket. Eltérõ színnel jelezve a már foglalt, és a még szabad helyeket.
+
+CIN-P-REQ4		E-mail-es visszaigazolás	Sikeres foglalás után a regisztrációs adatokat felhasználva értesítse a felhasználót a foglalása információiról e-mailben.
+
+CIN-P-REQ5		Letisztultság			Minél egyszerûbb, letisztultabb, de sokat mondó kinézetre kell törekedni, hogy az idõsebb korosztály is könnyen használni tudja.
+
+CIN-P-REQ6		Kivételes helyzetek kezelése	A programnak tudnia kell kezelni a nem várt, kivételes helyzeteket is, pl. teltház esetén közölni kell a mozilátogatóval, 
+							hogy nincs már szabad hely az általa választott vetítésre. Biztosítani kell a foglalás lemondás lehetõségét.
+
+
+A megrendelõ igényei összefoglalva:
+
+-legyen egyszerû, letisztult
+-egy hozzá nem értõ is könnyen tudja használni
+-regisztrációs felület
+-e-mail-es visszaigazolás
+-teljeskörû információ a kínálatról
+-kivételes helyzetek kezelése
+-adatbázis alapúság
