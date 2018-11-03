@@ -7,8 +7,9 @@ Ezzel megkönnyítve a foglalási folyamatot.
 
 - Fontos, hogy a kínálatban szereplõ filmek minél teljesebb körû információt szolgáltassanak a mozilátogatóknak.
 
--Jó lenne, ha a foglalásokat regisztráció után biztosítaná, megkönnyítve a késõbbi foglalások menetét a felhasználónak, valamint a mozi számára ezzel 
-lehetõvé téve a foglaló személyének beazonosítását.
+-Jó lenne, ha a foglalásokat regisztráció útján is biztosítaná, megkönnyítve a késõbbi foglalások menetét a felhasználónak, valamint a mozi számára ezzel 
+lehetõvé téve a foglaló személyének beazonosítását,.
+Ugyanakkor, ne legyen kötelezõ a regisztráció a foglalás lebonyolításához, amennyiben ez megoldható.
 
 - Grafikus felületen tegye lehetõvé a szabad helyek áttekintését, eltérõ színnel jelezve a már foglalt
 és a még szabad helyeket.
@@ -19,6 +20,8 @@ lehetõvé téve a foglaló személyének beazonosítását.
 ember is könnyen használni tudja (Idõsebb felhasználokat is figyelembe véve).
 
 - Fontos, hogy a program a kivételes helyzeteket is kezelni tudja (teltház, foglalás lemondása, nyitva-zárvatartás)
+
+- Legyen egy elõre elkészített root jogosultságokkal rendelkezõ felhasználó is.
 
 Követelménylista:
 
@@ -37,6 +40,8 @@ CIN-P-REQ5		Letisztultság			Minél egyszerûbb, letisztultabb, de sokat mondó kiné
 CIN-P-REQ6		Kivételes helyzetek kezelése	A programnak tudnia kell kezelni a nem várt, kivételes helyzeteket is, pl. teltház esetén közölni kell a mozilátogatóval, 
 							hogy nincs már szabad hely az általa választott vetítésre. Biztosítani kell a foglalás lemondás lehetõségét.
 
+CIN-P-REQ7		Rendszerkezelõ felhasználó	Legyen egy elõre elkészített root jogosultságokkal rendelkezõ felhasználó is, aminek a jelszavát a szoftver átadása után meg lehet változtatni és elmenti magát az adatbázisba.
+							A root jogosultságú felhasználó a szoftver minden funkcióját érje el.		
 
 A megrendelõ igényei összefoglalva:
 
