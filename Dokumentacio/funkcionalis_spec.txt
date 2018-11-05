@@ -1,0 +1,45 @@
+Funkcionális Specifikáció:
+
+-----------------------------
+
+A project egy mozis ülõhely foglaló rendszert valósít meg amelynek a fõ funkciója az, hogy regisztrációval vagy az nélkül egy moziban 
+vetített filmekre tudjunk ülõhelyet foglalni.
+A program egy önálló MVC modellel kialakított JavaFX FXML Application lesz, amelyet késõbb majd akár bõvíteni is lehet.
+Egy egyszerû letisztult, több felületû asztali alkalmazás megvalósítása a cél.
+A rendszer egy három táblás MySql adatbázishoz fog csatlakozni több felületen keresztül. Az elsõ tábla tárolni fogja a regisztrált felhasználók adatait
+(teljes nevét, email címét, telefonszámát, regisztráció pontos dátumát UTC+1 szerint, és legyen egyedi azonosítója), 
+a második a lefoglalt helyek adatait (foglaló teljes neve, telefonszáma, email címe, foglalásának dátuma, melyik filmre foglalt, hányas vetítésre, 
+melyik teremben, hanyas széket/székeket), a harmadik pedig a vetített filmeket (film angol címe, magyar címe, magyar elõzetes linkje, hány perces, és típusa).
+Egy logolást végzõ funkció is bele lesz építve, ami kimenti az oldalon végzett tevékenységeket és módosításokat.
+
+
+Fõbb funkciók:
+-----------------------------
+
+filmek megjelenítése:
+	A kínálatban lévõ filmek minden adatát, például a vetítési idõpontot, korhatárt, vetítés hosszát lehet megtekinteni a fõoldalon. Az adatbázis film táblájából
+	és a vetítés táblájából fogja kinyerni ezeket az információkat.
+
+regisztrációs felület:
+	Külön felületen lehet majd regisztrálni, amely bekéri a személy teljes nevét, email címét, telefonszámát, regisztráció pontos dátumát UTC+1 szerint 
+	és ad egy egyedi azonosítót, majd eltárolja ezeket az adatokat az adatbázis ennek megfelelõ táblájában.
+	A rendszer a regisztrált személyeknek nem fogja újra kérni az adatait helyfoglaláskor, és fel tudnak iratkozni a mozi körlevelére,
+	ami hetente küld friss információt a heti vetítésrõl a regisztrált email címekre.
+
+root jogosultságú felhasználó:
+	Elõre elkészített felhasználó lesz speciális jogosultságokkal. A jelszavát a szoftver átadása után meg lehet majd változtatni, amely szintén elmentésre
+	kerül az adatbázisban. Ez a felhasználó a szoftver minden funkcióját el fogja érni, tud majd filmeket letörölni és kihelyezni az adatbázisban,
+	idõpontokat tud változtatni a vetítésekhez, vetítések típusát (normál, 3D, stb) tudja változtatni, foglalásokat tud majd törölni, 
+	a termek elérhetõségét tudja majd változtatni, kezdõoldalra tud üzeneteket írni, és az árakat változtatni.
+
+helyfoglalás:
+	A foglalás külön felületen fog megtörténni, miután kiválasztottuk a számunkra megfelelõ vetítést. Az oldalon bármely meghírdetett vetítendõ filmre helyet 
+	lehet foglalni. A felületen megkülönböztethetõ két színnel lesznek feltûntetve az adott teremben adott vetítésen a szabad helyek és a már lefoglalt helyek.
+	Teltház esetén a program dobni fog egy hibaüzenetet, hogy már nem lehet foglalni az adott vetítésre. A foglaláshoz szükséges lesz megadni a foglaló személy
+	nevét, telefonszámát, email címét, de ha már regisztrálva foglalunk akkor ezek automatikusan ki lesznek töltve. A foglalásról a rendszer e-mailes visszaigazolást 
+	fog küldeni. A foglalás után lesz lehetõség azonnali jegyvételre is, amelyet kártyával lehet kifizetni. Biztosítva lesz a foglalás visszamondására is a lehetõség.
+
+letisztultság:
+	A lehetõ legegyszerûbb lesz a felülete a programnak, mivel fontos az áttenkinthetõség, a letisztultság, hogy az idõsebb korosztály is egyszerûen tudja
+	kezelni a felületeket, ne legyen belõle félreértés.
+
