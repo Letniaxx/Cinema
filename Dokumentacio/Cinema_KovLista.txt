@@ -1,54 +1,64 @@
 Cinema - Helyfoglaló projekt
 
-A riport alapján a megrendelõ egy olyan programot szeretne,
-amely segítségével a mozilátogatók interneten keresztül le tudják
-foglalni a kínálatban szereplõ vetítésekre a nekik szimpatikus helyet.
-Ezzel megkönnyítve a foglalási folyamatot.
 
-- Fontos, hogy a kínálatban szereplõ filmek minél teljesebb körû információt szolgáltassanak a mozilátogatóknak.
+A riport alapján a megrendelõ olyan asztali alkalmazást szeretne, aminek segítségével az regisztrált és nem regisztrált
+felhasználók is helyet tudnak foglalni a mozi kínálatában szereplõ filmekre.
 
--Jó lenne, ha a foglalásokat regisztráció útján is biztosítaná, megkönnyítve a késõbbi foglalások menetét a felhasználónak, valamint a mozi számára ezzel 
-lehetõvé téve a foglaló személyének beazonosítását,.
+
+- Fontos, hogy a kínálatban szereplõ filmek minél részletesebb információt szolgáltassanak a mozilátogatóknak.
+
+-Jó lenne, ha a foglalásokat regisztráció útján is biztosítaná, megkönnyítve a késõbbi foglalások menetét a felhasználónak,
+ valamint a mozi számára ezzel 
+lehetõvé téve a foglaló személyének beazonosítását.
 Ugyanakkor, ne legyen kötelezõ a regisztráció a foglalás lebonyolításához, amennyiben ez megoldható.
 
-- Grafikus felületen tegye lehetõvé a szabad helyek áttekintését, eltérõ színnel jelezve a már foglalt
-és a még szabad helyeket.
+- Grafikus felületen tegye lehetõvé a szabad helyek áttekintését, eltérõ színnel jelezve a már foglalt,
+ még szabad és az éppen kiválasztott helyeket.
 
 - E-mail útján értesítse a vendégeket a foglalás megerõsítésérõl.
 
-- Jó lenne, ha minél letisztultabb lenne, úgy, hogy egy hozzá nem értõ
+- A program felülete minél ergonómikusabb legyen, úgy, hogy egy hozzá nem értõ
 ember is könnyen használni tudja (Idõsebb felhasználokat is figyelembe véve).
 
 - Fontos, hogy a program a kivételes helyzeteket is kezelni tudja (teltház, foglalás lemondása, nyitva-zárvatartás)
 
 - Legyen egy elõre elkészített root jogosultságokkal rendelkezõ felhasználó is.
 
+- A regisztrált felhasználók adatai (egyértelmû azonosító,teljes név, e-mail, telefonszám, regisztrálás idõpontja) legyenek elmentve adatbázisba.
+
+- A foglalások információit (egyedi azonosító, teljes neve, telefonszáma, email címe, foglalásának dátuma, melyik filmre foglalt, hányas vetítésre, melyik teremben, hanyas széket/székeket) tároljuk el külön táblában az adatbázison belül.
+
+- Az adatbázis 3. táblájában legyenek eltárolva a vetített filmek adatai (film angol címe, magyar címe, magyar elõzetes linkje, hány perces, korhatár és típusa).
+
+
 Követelménylista:
 
 ID			NÉV				Kifejtés
 
-CIN-P-REQ1		Filmek megjelenítése		A kínálatban lévõ filmek megjelenítése a hozzájuk tartozó kiegészítõ információkkal (vetítési idõpont, korhatár, vetítés hossza)
+CIN-P-REQ1		Filmek megjelenítése		A kínálatban lévõ filmek megjelenítése a hozzájuk tartozó kiegészítõ információkkal (vetítési idõpont, korhatár, 							vetítés hossza)
 
 CIN-P-REQ2		Regisztráció biztosítása	Regisztráció után biztosítsa a foglalás lebonyolítását, a foglalást végzõ személy beazonosíthatósága miatt.
 
-CIN-P-REQ3		Helyek áttekinthetõsége		Grafikus felületen jelenítse meg a lefoglalható helyeket. Eltérõ színnel jelezve a már foglalt, és a még szabad helyeket.
+CIN-P-REQ3		Helyek áttekinthetõsége		Grafikus felületen jelenítse meg a lefoglalható helyeket. Eltérõ színnel jelezve a már foglalt, és a még szabad 							és az éppen kiválasztott helyeket.
 
-CIN-P-REQ4		E-mail-es visszaigazolás	Sikeres foglalás után a regisztrációs adatokat felhasználva értesítse a felhasználót a foglalása információiról e-mailben.
+CIN-P-REQ4		E-mail-es visszaigazolás	Sikeres foglalás után a regisztrációs adatokat felhasználva értesítse a felhasználót a foglalása információiról 							e-mailben.
 
-CIN-P-REQ5		Letisztultság			Minél egyszerûbb, letisztultabb, de sokat mondó kinézetre kell törekedni, hogy az idõsebb korosztály is könnyen használni tudja.
+CIN-P-REQ5		Letisztultság			Minél ergonómikusabb,letisztultabb, de sokat mondó kinézetre kell törekedni, hogy az idõsebb korosztály is 									könnyen használni tudja.
 
-CIN-P-REQ6		Kivételes helyzetek kezelése	A programnak tudnia kell kezelni a nem várt, kivételes helyzeteket is, pl. teltház esetén közölni kell a mozilátogatóval, 
+CIN-P-REQ6		Kivételes helyzetek kezelése	A programnak tudnia kell kezelni a nem várt, kivételes helyzeteket is, pl. teltház esetén közölni kell a 							mozilátogatóval, 
 							hogy nincs már szabad hely az általa választott vetítésre. Biztosítani kell a foglalás lemondás lehetõségét.
 
-CIN-P-REQ7		Rendszerkezelõ felhasználó	Legyen egy elõre elkészített root jogosultságokkal rendelkezõ felhasználó is, aminek a jelszavát a szoftver átadása után meg lehet változtatni és elmenti magát az adatbázisba.
-							A root jogosultságú felhasználó a szoftver minden funkcióját érje el.		
+CIN-P-REQ7		Rendszerkezelõ felhasználó	Legyen egy elõre elkészített root jogosultságokkal rendelkezõ felhasználó is, aminek a jelszavát a szoftver 							átadása után meg lehet változtatni és elmenti magát az adatbázisba.
+							A root jogosultságú felhasználó a szoftver minden funkcióját érje el.
+
+CIN-P-REQ8		Adatbázis kapcsolat		Az adatbázisban 3 tábla legyen.
 
 A megrendelõ igényei összefoglalva:
 
--legyen egyszerû, letisztult
--egy hozzá nem értõ is könnyen tudja használni
+-legyen ergonómikus,letisztult
+-kezdõlap
 -regisztrációs felület
 -e-mail-es visszaigazolás
 -teljeskörû információ a kínálatról
 -kivételes helyzetek kezelése
--adatbázis alapúság
+-adatbázis kapcsolat
