@@ -29,7 +29,7 @@
       </Pane>
       <Pane layoutX="721.0" layoutY="161.0" prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: #ffebcc;">
          <children>
-            <Button fx:id="btnToLogin" layoutX="99.0" layoutY="211.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="251.0" style="-fx-background-color: #ffebcc;" text="Belépés" textFill="#490c0c" underline="true">
+            <Button fx:id="btnBelepes" layoutX="99.0" layoutY="211.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="251.0" style="-fx-background-color: #ffebcc;" text="Belépés" textFill="#490c0c" underline="true">
                <font>
                   <Font name="Bauhaus 93" size="28.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnToReserve" layoutX="122.0" layoutY="274.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #ffebcc;" text="Regisztráció" textFill="#490c0c" underline="true">
+            <Button fx:id="btnToRegistration" layoutX="122.0" layoutY="274.0" mnemonicParsing="false" onAction="#nextToRegistration" prefHeight="53.0" prefWidth="206.0" style="-fx-background-color: #ffebcc;" text="Regisztráció" textFill="#490c0c" underline="true">
                <font>
                   <Font name="Bauhaus 93" size="28.0" />
                </font>
@@ -45,16 +45,24 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="fieldAccount" alignment="CENTER" layoutX="93.0" layoutY="66.0" promptText="Felhasználónév">
+            <TextField fx:id="fieldAccount" alignment="CENTER" layoutX="93.0" layoutY="66.0" promptText="E-mail cím">
                <font>
                   <Font name="Britannic Bold" size="25.0" />
                </font>
             </TextField>
-            <PasswordField alignment="CENTER" layoutX="93.0" layoutY="134.0" promptText="Jelszó">
+            <PasswordField fx:id="fieldPassword" alignment="CENTER" layoutX="93.0" layoutY="134.0" promptText="Jelszó">
                <font>
                   <Font name="Britannic Bold" size="25.0" />
                </font>
             </PasswordField>
+            <Button fx:id="btnLoginBack" layoutX="167.0" layoutY="333.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #ffebcc;" text="Vissza" textFill="#490c0c" underline="true">
+               <font>
+                  <Font name="Bauhaus 93" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
          <effect>
             <Glow level="0.18" />
