@@ -1,0 +1,171 @@
+JFrame Form-os!!!!
+
+
+
+
+import javax.swing.JOptionPane;
+
+public class Main extends javax.swing.JFrame {
+
+
+    public Main() {
+        initComponents();
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        exitlbl = new javax.swing.JLabel();
+        lblemail = new javax.swing.JLabel();
+        lblsubject = new javax.swing.JLabel();
+        lblmessage = new javax.swing.JLabel();
+        emailtext = new javax.swing.JTextField();
+        subjecttext = new javax.swing.JTextField();
+        messagetext = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        exitlbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        exitlbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitlbl.setText("X");
+        exitlbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitlblMouseClicked(evt);
+            }
+        });
+
+        lblemail.setText("E-mail:");
+
+        lblsubject.setText("Tárgy:");
+
+        lblmessage.setText("Üzenet:");
+
+        jButton1.setText("Küldés");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblemail, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(exitlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(messagetext, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblsubject)
+                                .addComponent(lblmessage)
+                                .addComponent(emailtext)
+                                .addComponent(subjecttext, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)))
+                        .addGap(0, 83, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(273, 273, 273)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(exitlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblemail))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailtext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblsubject)
+                .addGap(18, 18, 18)
+                .addComponent(subjecttext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblmessage)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(messagetext, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(jButton1)
+                .addContainerGap(59, Short.MAX_VALUE))
+        );
+
+        pack();
+    }          
+
+    private void exitlblMouseClicked(java.awt.event.MouseEvent evt) {                                     
+        System.exit(0);
+    }                                    
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        
+    }                                        
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        try{
+            if(emailtext.getText()!=null && !emailtext.getText().equals("")){
+                MailSender3 email = new MailSender3();
+                email.SendEmail(emailtext.getText(), subjecttext.getText(), messagetext.getText());
+            }else{
+                JOptionPane.showMessageDialog(null, "Hiányzó email cím", "Error", JOptionPane.OK_OPTION);
+            }
+        }catch (Exception e) {
+            
+        }
+    }                                     
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+
+     
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Main().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JTextField emailtext;
+    private javax.swing.JLabel exitlbl;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lblemail;
+    private javax.swing.JLabel lblmessage;
+    private javax.swing.JLabel lblsubject;
+    private javax.swing.JTextField messagetext;
+    private javax.swing.JTextField subjecttext;                  
+}
